@@ -5,12 +5,14 @@ from number2kanji import number2kanji
 
 app = Flask(__name__)
 
-  
+
+# トップページ
 @app.route('/') #, methods=['GET','POST']) 
 def index():
     return render_template('index.html')
     
-    
+
+# 入力送信用ページ    
 @app.route('/v1/kanji2number', methods=['GET', 'POST'])
 def kan():
     if request.method == 'POST':
@@ -23,7 +25,8 @@ def num():
         number=request.form.get('val')
         return redirect('/v1/number2kanji/'+number)     
        
-    
+
+# 結果表示用ページ        
 @app.route('/v1/kanji2number/<kanji>')
 def k2n(kanji):
     number = kanji2number(kanji)
