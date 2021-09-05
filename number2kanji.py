@@ -15,6 +15,12 @@ t_unit = t_unit[::-1]
 
 def number2kanji(sj:str):
 
+    if len(sj)>16:
+        return 'エラー'　# 桁数が規定の 16 桁を超えた場合のエラー表示
+        
+    if not sj == re.compile(r'\d+'):
+        return 'エラー'　# 半角アラビア数字以外の文字が含まれていた場合（または空文字）のエラー表示
+    
     kansuji = sj.translate(t_ksuji)
     m = len(kansuji)
     
