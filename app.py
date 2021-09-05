@@ -36,7 +36,7 @@ def k2n(kanji):
 def n2k(number):
     kanji = number2kanji(number) 
     if kanji == 'エラー':
-        return render_template('204.html')  # 入力桁数が規定の値を超えた場合のエラー表示
+        return render_template('204.html')  # 変換できない場合のエラー表示
     return render_template('n2k.html',kanji=kanji)    
     
     
