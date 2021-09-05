@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<h2 class="m-5"></h2>
+<div class="form-group pb-3">
+	<form action="/v1/kanji2number/{{ number }}" method='POST'>
+	<p>{{ kanji }}<p>
+</div>
+<a class="btn btn-outline-success" href="/" role="button">home</a>
+	
+{% endblock %}

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8"?>
+	<meta name="viewpoint" content="width=device-width, nitial-scale=1.0">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+	<title>Document</title>
+	{% block head %}{% endblock %}
+</head>
+
+<body>
+	<nav class="navbar navbar-light bg-light p-3">
+		<a class="navbar-brand pl-3" href="/" style="font-size: 2rem;">漢数字変換</a>
+	</nav>	
+	{% block body %}{% endblock %}
+</body>
+
+</html>

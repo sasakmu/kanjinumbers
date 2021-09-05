@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<h2 class="m-5"></h2>
+<div class="form-group pb-3">
+	<form action="/v1/kanji2number" method="POST">
+		<label for="title">漢数字を入力してください。</label>
+		<input type="text" class="form-control" name="val" aria-describedy="title-help">
+		<input type="submit" value="漢数字⇒アラビア数字">
+	</form>	
+</div>
+<div class="form-group pb-3">
+	<form action="/v1/number2kanji" method="POST">
+		<label for="title">アラビア数字を入力してください。</label>
+		<input type="text" class="form-control" name="val" aria-describedy="title-help">
+		<input type="submit" value="アラビア数字⇒漢数字">
+	</form>	
+</div>
+<!-- <a class="btn btn-outline-success" href="/v1/kanji2number" role="button">漢数字⇒アラビア数字</a>
+<a class="btn btn-success" href="/v1/number2kanji" role="button">アラビア数字⇒漢数字</a> -->
+	
+{% endblock %}
