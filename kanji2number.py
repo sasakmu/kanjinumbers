@@ -28,7 +28,6 @@ def kanji2number(kstring: str, sep=False):
         result = 0
         for piece in reversed(re_obj.findall(sj)):
             if piece in transdic:
-               
                 unit = transdic[piece]
             else:
                 val = int(piece) if piece.isdecimal() else _transvalue(piece)
