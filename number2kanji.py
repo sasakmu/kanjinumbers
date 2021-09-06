@@ -13,6 +13,7 @@ t_ksuji = str.maketrans('1234567890','壱弐参四五六七八九零')
 
 t_unit = '千百拾兆千百拾億千百拾万千百拾'
 t_unit = t_unit[::-1]
+t_manshin = ['万','億','兆']
 
 def number2kanji(sj:str):
 
