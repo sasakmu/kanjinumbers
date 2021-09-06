@@ -35,7 +35,7 @@ def k2n(kanji):
 @app.route('/v1/number2kanji/<number>')
 def n2k(number):
     kanji = number2kanji(number) 
-    if kanji == 'エラー':
+    if kanji == '':
         return render_template('204.html')  # 変換できない場合のエラー表示
     return render_template('n2k.html',kanji=kanji)    
     
