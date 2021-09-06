@@ -30,14 +30,14 @@ def num():
 @app.route('/v1/kanji2number/<kanji>')
 def k2n(kanji):
     number = kanji2number(kanji)
-    return render_template('k2n.html',number=number)
+    return render_template('kanji2number.html',number=number)
     
 @app.route('/v1/number2kanji/<number>')
 def n2k(number):
     kanji = number2kanji(number) 
     if kanji == 'err':
         return render_template('204.html')  # 変換できない場合のエラー表示
-    return render_template('n2k.html',kanji=kanji)    
+    return render_template('number2kanji.html',kanji=kanji)    
     
     
     
