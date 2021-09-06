@@ -17,7 +17,7 @@ t_unit = t_unit[::-1]
 def number2kanji(sj:str):
 
     if len(sj)>16:
-        return 'err'　# 桁数が規定の 16 桁を超えた場合のエラー表示
+        return 'err' # 桁数が規定の 16 桁を超えた場合のエラー表示
     
     kansuji = sj.translate(t_ksuji)
     m = len(kansuji)
