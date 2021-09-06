@@ -31,7 +31,15 @@ def number2kanji(sj:str):
             transuji = kansuji[m-1] 
         for i in range(2,m+1):
             
-            if not  kansuji[m-i] == '零':
+            if not  kansuji[m-i] == '零': # 係数が 0 となる位を表示しない
                  transuji = kansuji[m-i]+t_unit[i-2] + transuji 
+            elif i in [5,9,13]:
+                if not transuji == '': # 係数が 0 でも万億兆は必要に応じて表示させる
+                    if transuji[0] in t_manshin:
+                        transuji = transuji.lstrip(transuji[0])
+                transuji = t_unit[i-2] + transuji
+                
+        if transuji[0] in t_manshin:
+            transuji = transuji.lstrip(transuji[0])
     
         return transuji
